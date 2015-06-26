@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.util.List" %>
+    
 <!DOCTYPE html >
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -19,21 +21,31 @@
   </div>
 </div>
 <!-- ####################################################################################################### -->
+
 <div class="wrapper col2">
   <div id="topbar">
     <div id="topnav">
       <ul>
-        <li class="active"><a href="/permisoe">Pedidos</a></li>
-        <li><a href="/permisod">Delivery</a></li>
+        <li class="active"><a href="index.jsp">Inicio</a></li>
+        <li><a href="#">Te ofrecemos</a>
+          <ul>
+            <li><a href="carnes.jsp">Carne de cerdo</a></li>
+            <li><a href="embutidos.jsp">Embutidos</a></li>
+          </ul>
+        </li>
+        <li><a href="pedidos.jsp">Pedidos</a></li>
+        <li><a href="delivery.jsp">Delivery</a></li>
+        <li class="last"><a href="contactanos.jsp">Contáctanos</a></li>
+          <li class="last"><a href="/cerrar">cerrar Sesion</a><br></li>    
       </ul>
     </div>
-    <div id="search">
-    	<form action="/index.jsp">
-       <input type="submit"  value="Cerrar Sesion"></form>
-    </div>
-    <br class="clear" />
+       
+    <br class="clear">
   </div>
 </div>
+
+          <a href="/permisoe" color="white">Ver Pedidos</a><br>
+        <a href="/permisod" color="white">Ver Delivery</a><br>
 <!-- ####################################################################################################### -->
 <div class="wrapper col4">
   <div id="featured_intro">

@@ -38,22 +38,18 @@
         <li><a href="pedidos.jsp">Pedidos</a></li>
         <li><a href="delivery.jsp">Delivery</a></li>
         <li class="last"><a href="contactanos.jsp">Contáctanos</a></li>
-          <li class="last"><a href="/cerrar">cerrar Sesion</a><br></li>
-          
-          <a href="/admin">Ver Empleados</a><br>
-          <a href="/permisoe">Ver Pedidos</a><br>
-        <a href="/permisod">Ver Delivery</a><br>
-         
-        
+          <li class="last"><a href="/cerrar">cerrar Sesion</a><br></li>    
       </ul>
     </div>
+       
     <br class="clear">
   </div>
 </div>
+
+          <a href="/admin" color="white">Ver Empleados</a><br>
+          <a href="/permisoe" color="white">Ver Pedidos</a><br>
+        <a href="/permisod" color="white">Ver Delivery</a><br>
  
-<ul class="navbar">
-  <li><a href="/index.jsp">Regresar</a>
-</ul>
 
 <form action="/Borrar" method="get">
 Eliminar por correo codigo<br>
