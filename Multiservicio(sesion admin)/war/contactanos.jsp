@@ -13,6 +13,20 @@
 <title>Multiservicios la #1</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" href="estilo1.css" type="text/css" />
+<script src="/js/jquery-ui.js"></script>
+<script>
+$(function(){
+	$('#menu li a').click(function(event){
+		var elem = $(this).next();
+		if(elem.is('ul')){
+			event.preventDefault();
+			$('#menu ul:visible').not(elem).slideUp();
+			elem.slideToggle();
+		}
+	});
+});
+</script>
+
 </head>
 <body id="top">
 <div class="wrapper col1">
@@ -66,13 +80,26 @@
     <br class="clear" />
   </div>
 </div>
+
+<ul id="menu">
+<li><a href="#">Ubicanos</a>
+	<ul>
+		<li><p>Mercado San Camilo Puesto N°1 y 3 - Sección Porcino</p></li>
+	</ul>
+</li>
+<li><a href="#">LLamanos</a>
+	<ul>
+		<li><p>Telf.: 202307 - 287431  Cel.: 979090390 - 959919192</p></li>
+	</ul>
+</li>
+
 <!-- ####################################################################################################### -->
 <div class="wrapper col5">
   <div id="footer">
     <div class="footbox twitter">
       <h2>Facebook</h2>
       <ul>
-        <li><a href="#"><img src="facebookSiguenos.jpg" alt="" style="width:200px"/></a></li>
+        <li><a href="https://www.facebook.com/pages/Multiservicios-y-Distribuciones-La1/1592046441054930?ref=hl"><img src="facebookSiguenos.jpg" alt="" style="width:200px"/></a></li>
       </ul>
     </div>
     <div class="footbox flickr">
@@ -115,13 +142,12 @@
       <div id="comments">
         <ul class="commentlist">
           <li class="comment_odd">
-            <div class="author"><span class="name"><a href="#">Integrantes</a></span> <span class="wrote">escribió:</span></div>
+            <div class="author"><span class="name"><a href="">Integrantes</a></span> <span class="wrote">escribió:</span></div>
             <div class="submitdate"><a href="#">Mayo 28, 2015 at 12:54 pm</a></div>
             <p>Primera prueba, aún no guarda comentarios.</p>
           </li>
         </ul>
       </div>
-      
     </div>
     <br class="clear" />
   </div>

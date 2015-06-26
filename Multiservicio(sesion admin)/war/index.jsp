@@ -71,7 +71,7 @@
     <div class="footbox twitter">
       <h2>Facebook</h2>
       <ul>
-        <li><a href="#"><img src="facebookSiguenos.jpg" alt="" style="width:200px"/></a></li>
+        <li><a href="https://www.facebook.com/pages/Multiservicios-y-Distribuciones-La1/1592046441054930?ref=hlc"><img src="facebookSiguenos.jpg" alt="" style="width:200px"/></a></li>
       </ul>
     </div>
     <div class="footbox flickr">
@@ -89,42 +89,45 @@
     <div class="footbox posts">
       <h2>Comenta...</h2>
       <div id="respond">
-        <form action="#" method="post">
+  
+        <form id="myForm" name="myForm" action="/comentarios" method="post">
           <p>
             <label for="name">Name:</label>
-            <input type="text" name="name" id="name" value="" size="22" />
+            <input type="text" name="nombre" id="nombre"  value="" size="22">
           </p><br>
           <p>
             <label for="email">Email:</label>
-            <input type="text" name="email" id="email" value="" size="22" />
+            <input type="email" name="correo" id="correo"  value="" size="22">
           </p><br>
           <p>
-            <textarea name="comment" id="comment" cols="32" rows="7"></textarea>
+            <textarea name="comentarios" id="comentarios" cols="32" rows="7"></textarea>
           </p><br>
-          <p>
-            <input name="submit" type="submit" id="submit" value="Enviar" />
+          <p id="enviar">
+          
+            <input name="enviar" type="submit" id="enviar" value="Enviar">
             &nbsp;
-            <input name="reset" type="reset" id="reset" tabindex="5" value="Limpiar" />
+            <input name="reset" type="reset" id="reset" tabindex="5" value="Limpiar">
           </p>
         </form>
       </div>
     </div>
     <div class="footbox banners last">
+  
       <h2>Comentarios</h2>
       <div id="comments">
         <ul class="commentlist">
           <li class="comment_odd">
-            <div class="author"><span class="name"><a href="#">Integrantes</a></span> <span class="wrote">escribió:</span></div>
-            <div class="submitdate"><a href="#">Mayo 28, 2015 at 12:54 pm</a></div>
-            <p>Primera prueba, aún no guarda comentarios.</p>
+            <div class="author"><span class="name"><a href="#"><%=session.getAttribute("nombre")%></a></span> <span class="wrote">escribió:</span></div>
+            <div class="submitdate"><a href="">Mayo 28, 2015 at 12:54 pm</a></div>
+            <p><%=session.getAttribute("comentarios")%></p>
           </li>
         </ul>
-      </div>
-      
+      </div>      
     </div>
     <br class="clear" />
   </div>
 </div>
+
 <!-- ####################################################################################################### -->
 </body>
 </html>

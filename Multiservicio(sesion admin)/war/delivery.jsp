@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="cerdo.unsa.*"%>
+<%@ page import="cerdo.unsa.Carne"%>
+<%@ page import="java.util.*" %>
+<%@ page import="javax.servlet.http.*;" %>
 <!DOCTYPE HTML>
 <!-- The HTML 4.01 Transitional DOCTYPE declaration-->
 <!-- above set at the top of the file will set     -->
@@ -58,35 +62,81 @@
       		<h3><label>Nombre/Empresa:</label></h3>
       		<input type="text" name="nombre" tabindex="1"><br><br>
       		<h3><label>DNI/RUC:</label></h3>
-      		<input type="text" name="dni" tabindex="2"><br><br>
+      		<input type="number" name="dni" tabindex="2"><br><br>
       		<h3><label>Dirección:</label></h3>
       		<input type="text" name="direccion" tabindex="3"><br><br>
       		<h3><label>Teléfono:</label></h3>
       		<input type="number" name="telefono" tabindex="4"><br><br>
       		<h3><label>Destino:</label></h3>
       		<input type="text" name="destino" tabindex="5"><br><br>
-      		<h3><label for="fechaen">Fecha de entrega:</label></h3>
-      		<input type="text" name="fechaen" tabindex="6"><br><br>
+      		<h3><label for="fechaen">Fecha de entrega:(aaaa-mm-dd)</label></h3>
+      		<input type="date" name="fechaen" tabindex="6"><br><br>
     	</div>
     	<h3><label for="entrega">Tipo de entrega: Delivery</label></h3><br>
     	<h3>*No se incluye costo de movilidad.</h3>
     	<br><br>
-    	<center><table style="width:100%" border="1">
+    	<table style="width:100%" border="1">
       	<tr>
     		<th><h2>Producto</h2></th>		
     		<th><h2>Cantidad</h2></th>
     		<th><h2>Monto</h2></th>
   		</tr>
+  		<%String[] nombre = session.getValueNames();
+      	for (int i=0; i<nombre.length; i++){
+      		if (nombre[i].equals("cabeza") || nombre[i].equals("cogote") || nombre[i].equals("costillas")
+      				|| nombre[i].equals("lomo") || nombre[i].equals("brazuelo") || nombre[i].equals("pierna")){
+      			ArrayList<String> list = (ArrayList<String>)session.getAttribute(nombre[i]);
+      			int len=list.size()-1;
+      			%>
   		<tr>
-    		<td><br></td>
-    		<td><br></td>		
-    		<td><br></td>
+    		<th rowspan=<%=len%>><%=list.get(0)%></th>
+    		<%for (int j=1; j<list.size(); j++){ %>
+    		<td><%=list.get(j) %> <input type="number" name="peso"> <select name="unidad">
+    		    <option value="--" >--</option>
+    		    <option value="gr" >gr</option>
+    		    <option value="kg" >kg</option>
+    		    <input type="Button" name="" value="ver monto" onclick="calcula()">
+    		    </select></td>
+    		<td><input type="Text" name="resultado" value="0" size="4"> 
+    		
+    		</td>
   		</tr>
-      </table></center><br><br>
+  		      	<%}}%>
+        <%} %>
+      </table><br><br>
       
+       	<table style="width:100%" border="1">
+      	<tr>
+    		<th><h2>Producto</h2></th>		
+    		<th><h2>Cantidad</h2></th>
+    		<th><h2>Monto</h2></th>
+  		</tr>
+  		<%String[] name = session.getValueNames();
+      	for (int i=0; i<name.length; i++){
+      		if (name[i].equals("queso de chancho") || name[i].equals("jamonada") ||name[i].equals("mortadela")
+      				|| name[i].equals("salchicha") || name[i].equals("chorizo") || name[i].equals("manteca")){
+      			ArrayList<String> list = (ArrayList<String>)session.getAttribute(name[i]);%>
+  		<tr>
+    		<td><%=list.get(0)%></td>
+    		<td><input type="number" name="peso"> <select name="unidad">
+    		    <option value="--" onclick="calcula">--</option>
+    		    <option value="gr" onclick="calcula">gr</option>
+    		    <option value="kg" onclick="calcula">kg</option>
+    		    </select></td>
+    		<td><input type="Text" name="resultado" value="0" size="4"></td>
+  		</tr>
+  		      	<%}%>
+        <%} %>
+      </table><br><br>  
+      	<input name="submit" type="submit" formaction="carnes.jsp" value="Carnes">
+     	&nbsp;
+     	<input name="submit" type="submit" formaction="embutidos.jsp" value="Embutidos">
+     	&nbsp;    
       	<input name="reset" type="reset" id="reset" tabindex="5" value="Limpiar">
      	&nbsp;
       	<input name="submit" type="submit" value="Confirmar">
+      	&nbsp;
+      	<input name="submit" type="submit"  formaction="pedidos.jsp" value="Pedidos">
     </form>
     <br class="clear" />
   </div>

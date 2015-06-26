@@ -2,7 +2,6 @@
 
 @import url("estilo2.css");
 
-html{overflow-y:scroll; cursor: url('cerditoico.ico'), default;}
 body{margin:0; padding:0; font-size:13px; font-family:Georgia, "Times New Roman", Times, serif; color:#999999; background-color:#151515;}
 
 .justify{text-align:justify;}

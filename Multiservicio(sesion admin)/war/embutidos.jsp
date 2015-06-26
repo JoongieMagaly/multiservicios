@@ -54,7 +54,7 @@
   <div id="featured_intro">
   <br><br>
   <div id="carnes">
-  <form action="#">
+  <form name="formu" action="/pedidos" method="get">
     <h2>Te ofrecemos:</h2><br>
       <table style="width:100%" border="1">
       	<tr>
@@ -64,15 +64,15 @@
   		</tr>
   		<tr>
     		<td><img id="d" src="queso.jpg" width="150px" alt=""/><br><br>
-    			S/. 0.00<br>
+    			S/<input type="text" name="precio" value="13.00" disabled size="4"> x Kg<br>
     			<input id="check" type="checkbox" name="queso" value="comprar">Comprar<br>
     		</td>
     		<td><img id="d" src="jamonada.jpg" width="150px" alt=""/><br><br>
-    			S/. 0.00<br>
+    			S/<input type="text" name="precio" value="10.00" disabled size="4"> x Kg<br>
     			<input id="check" type="checkbox" name="jamonada" value="comprar">Comprar<br>
     		</td>		
     		<td><img id="d" src="mortadela.jpg" width="150px" alt=""/><br><br>
-    			S/. 0.00<br>
+    			S/<input type="text" name="precio" value=9.00" disabled size="4"> x Kg<br>
     			<input id="check" type="checkbox" name="mortadela" value="comprar">Comprar<br>
     		</td>
   		</tr>
@@ -85,20 +85,20 @@
   		</tr>
   		<tr>
     		<td><img id="d" src="salchicha.jpg" align="middle" width="150px" alt=""/><br><br>
-    			S/. 0.00<br>
+    			S/<input type="text" name="precio" value="17.00" disabled size="4"> x Kg<br>
     			<input id="check" type="checkbox" name="salchicha" value="comprar">Comprar<br>
     		</td>
     		<td><img id="d" src="chorizo.png" width="150px"><br><br>
-    			S/. 0.00<br>
+    			S/<input type="text" name="precio" value="16.00" disabled size="4"> x Kg<br>
     			<input id="check" type="checkbox" name="chorizo" value="comprar">Comprar<br>
     		</td>		
     		<td><img id="d" src="manteca.jpg" width="150px"><br><br>
-    			S/. 0.00<br>
+    			S/<input type="text" name="precio" value="5.00" disabled size="4"> x Kg<br>
     			<input id="check" type="checkbox" name="manteca" value="comprar">Comprar<br>
     		</td>
   		</tr>
       </table><br><br>
-      	<input type="submit" value="Enviar Pedido" />
+      	<input type="submit" value="Enviar Pedido">
       </form>
     </div>
     <br class="clear" />
