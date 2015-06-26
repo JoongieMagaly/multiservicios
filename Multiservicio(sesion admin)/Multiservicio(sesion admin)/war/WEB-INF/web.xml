@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>Multiservicio</servlet-name>
+		<servlet-class>cerdo.unsa.MultiservicioServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Multiservicio</servlet-name>
+		<url-pattern>/multiservicio</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Sesion</servlet-name>
+		<servlet-class>cerdo.unsa.Sesion</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Sesion</servlet-name>
+		<url-pattern>/sesion</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>PermisoD</servlet-name>
+		<servlet-class>cerdo.unsa.PermisoD</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PermisoD</servlet-name>
+		<url-pattern>/permisod</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>PermisoE</servlet-name>
+		<servlet-class>cerdo.unsa.PermisoE</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PermisoE</servlet-name>
+		<url-pattern>/permisoe</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>Cerrar</servlet-name>
+		<servlet-class>cerdo.unsa.Cerrar</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Cerrar</servlet-name>
+		<url-pattern>/cerrar</url-pattern>
+	</servlet-mapping>
+	
+	
+	
+		<servlet>
+		<servlet-name>Save</servlet-name>
+		<servlet-class>cerdo.unsa.Save</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Save</servlet-name>
+		<url-pattern>/save</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Crear</servlet-name>
+		<servlet-class>cerdo.unsa.Crear</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Crear</servlet-name>
+		<url-pattern>/crear</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Borrar</servlet-name>
+		<servlet-class>cerdo.unsa.Borrar</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Borrar</servlet-name>
+		<url-pattern>/Borrar</url-pattern>
+	</servlet-mapping>
+	
+	
+		<servlet>
+		<servlet-name>Save</servlet-name>
+		<servlet-class>cerdo.unsa.Save</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Save</servlet-name>
+		<url-pattern>/save</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>Admin</servlet-name>
+		<servlet-class>cerdo.unsa.Admin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Admin</servlet-name>
+		<url-pattern>/admin</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Codigo</servlet-name>
+		<servlet-class>cerdo.unsa.Codigo</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Codigo</servlet-name>
+		<url-pattern>/codigo</url-pattern>
+	</servlet-mapping>
+	
+	
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
